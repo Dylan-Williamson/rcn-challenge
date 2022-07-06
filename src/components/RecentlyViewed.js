@@ -6,7 +6,7 @@ const RecentlyViewed = () => {
 
   const user = useSelector(state => state.users.user);
 
-  if (Object.keys(user).length > 0) {
+  if (user && Object.keys(user).length > 0) {
     return (
       <Link to={`/users/${user.login.username}`}>
         <div className="recentlyViewed h-10 w-1/4 shadow-lg absolute justify-center justify-items-center text-center flex flex-col rounded font-teko text-base top-20 hover:cursor-pointer hover:opacity-70">
