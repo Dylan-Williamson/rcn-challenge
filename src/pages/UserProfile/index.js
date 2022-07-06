@@ -19,8 +19,8 @@ const UserProfile = () => {
     findUser();
   }, [user]);
 
-  if (Object.keys(user).length === 0) {
-    return <div className="profile">Loading...</div>;
+  if (!user || Object.keys(user).length === 0) {
+    return <div className="profile mt-20 font-teko text-xl text-center">User Not Found</div>;
   } else {
     return (
       <div className="profile w-screen max-w-screen-2xl mx-auto flex">
