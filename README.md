@@ -1,6 +1,6 @@
 
 # Roberts Communications Network
-![Logo](https://i.ibb.co/qyw20Gb/rcnlogo.png)
+![Logo](https://i.ibb.co/Drj77mV/rcnlogo-removebg-preview.jpg)
 
 A basic coding challenge for Roberts Communications Network.
 ## Deployment
