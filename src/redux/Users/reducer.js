@@ -1,7 +1,11 @@
 const initialState = {
   users: [],
   filteredUsers: [],
-  user: {}
+  user: {},
+  userSort: {
+    column: 'firstName',
+    direction: 'asc'
+  }
 };
 
 const usersReducer = (state = initialState, action) => {
@@ -12,6 +16,8 @@ const usersReducer = (state = initialState, action) => {
       return { ...state, filteredUsers: action.payload };
     case "SET_USER":
       return { ...state, user: action.payload };
+    case "SET_USER_SORT":
+      return { ...state, userSort: action.payload };
     case "RESET_USERS":
       return { ...state, users: [] };
     default:

@@ -1,3 +1,8 @@
+export const setUserSort = (sort) => ({
+  type: "SET_USER_SORT",
+  payload: sort
+})
+
 export const setUser = (user) => ({
   type: "SET_USER",
   payload: user
