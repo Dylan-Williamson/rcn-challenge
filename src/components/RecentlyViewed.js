@@ -8,12 +8,11 @@ const RecentlyViewed = () => {
 
   if (Object.keys(user).length > 0) {
     return (
-        <Link to={`/users/${user.login.username}`}>
-
-      <div className="recentlyViewed shadow-lg">
-      Recently Viewed: {user.name.first} {user.name.last}
-      </div>
-        </Link>
+      <Link to={`/users/${user.login.username}`}>
+        <div className="recentlyViewed shadow-lg">
+          Recently Viewed: {user.name.first} {user.name.last}
+        </div>
+      </Link>
     )
   } else {
     return (
