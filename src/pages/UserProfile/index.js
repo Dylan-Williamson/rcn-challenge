@@ -26,16 +26,23 @@ const UserProfile = () => {
   };
 
   const calculateDaysUntilBirthday = (birthday) => {
-    const today = new Date();
-    const birthDate = new Date(birthday);
-    const timeDiff = Math.abs(today.getTime() - birthDate.getTime());
-    const diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24));
 
-    if (diffDays % 365 < 1) {
+    let bday = new Date(birthday);
+    let today = new Date();
+    
+    bday.setFullYear(today.getFullYear());
+    if (today > bday) {
+      bday.setFullYear(today.getFullYear() + 1);
+    }
+
+    const days = Math.floor((bday - today) / (1000*60*60*24))
+    
+    if (days < 1) {
       return "Today is their birthday!";
     } else {
-      return `${diffDays % 365} days until their birthday!`;
+      return `${days} days until their birthday!`;
     }
+    return 
   };
 
   React.useEffect(() => {
