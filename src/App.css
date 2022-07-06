@@ -10,77 +10,38 @@ body {
 
 nav {
   background-color: #CEE5F2;
-  display: flex;
-  flex-direction: column;
-  justify-self: center;
   height: 70px;
-  top: 0;
-  z-index: 1;
-}
-
-.navItem {
-  /* border: 1px solid green; */
 }
 
 .landing {
-  display: flex;
   height: 100vh;
   padding-top: 70px;
 }
 
 .dashboard {
-  display: flex;
-  flex-direction: column;
   height: calc(100vh - 70px);
   margin-top: 70px;
 }
 
-#landingLogo {
-  /* border: 1px solid red; */
+.landingLogo {
   background-image: url('assets/rcnlogo.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 40%;
   margin-left: 10vw;
   margin-right: 10vw;
   margin-top: 10vh;
   transform: skewX(355deg);
 }
 
-#landingText {
-  height: 60%;
+.landingText {
   margin-left: 3vw;
   margin-right: 3vw;
   padding-top: 3vw;
 }
 
-#landingText h1 {
+.landingText h1 {
   font-size: 9vw;
-  font-family: 'Teko';
-  text-align: center;
-  /* font-style: italic; */
   transform: skewX(345deg);
   text-decoration: underline 0.5vw #4357a6;
   text-underline-offset: 1.5vw;
-}
-
-#tableHeader {
-  font-family: 'Teko';
-  font-size: 18px;
-  background: #536B78;
-  color: #CEE5F2;
-}
-
-#tableHeader:hover {
-  cursor: pointer;
-  opacity: 0.7;
-}
-
-.css-1ex1afd-MuiTableCell-root {
-  color: white !important;
-  font-family: 'Teko' !important;
-  font-size: 16px !important;
 }
 
 #pagination * {
@@ -95,89 +56,35 @@ tbody tr:hover {
 }
 
 .profile {
-  /* border: 1px solid red; */
-  width: 100vw;
-  max-width: 1600px;
   height: calc(100vh - 70px);
   margin-top: 70px;
-  margin-left: auto;
-  margin-right: auto;
   padding: 2vw;
-  display: flex;
 }
 
 .imageSection {
-  display: flex;
-  flex-direction: column;
-  /* border: 1px solid orange; */
   width: 50%;
   border: 1px solid rgba(108, 108, 108, 0.1);
   margin: 35px 5px;
-  border-radius: 10px;
   min-height: 630px;
   background-color: rgba(255, 255, 255, 0.646);
 }
 
 .imageSection h1 {
-  font-family: 'Teko';
-  font-size: 26px;
-  text-align: center;
-  margin-top: 20px;
   color: #536B78;
-  text-decoration: underline;
-}
-
-#userHeader {
-  font-size: 36px;
-  color: black;
-  margin-bottom: 20px;
-}
-
-.imageSection h2 {
-  font-family: 'Teko';
-  font-size: 18px;
-  text-align: center;
-  margin-top: 8px;
 }
 
 .avatar {
-  height: 300px;
-  width: 300px;
-  border-radius: 1000px;
   border: 3px solid black;
   margin: 0px auto;
 }
 
-.infoSection {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  padding: 20px;
-}
-
-.infoSection h1 {
-  font-family: 'Teko';
-  font-size: 26px;
-  text-align: center;
-  margin-top: 10px;
-  color: black;
-  text-decoration: underline;
-}
-
 .infoSection__top,
 .infoSection__bottom {
-  width: 100%;
-  height: 50%;
   border: 1px solid rgba(108, 108, 108, 0.1);
   margin: 15px 5px;
-  border-radius: 10px;
   min-height: 300px;
   background-color: rgba(255, 255, 255, 0.646);
   padding: 0px 10px;
-}
-
-#two {
-  text-decoration: unset;
 }
 
 .infoInner {
@@ -195,6 +102,11 @@ tbody tr:hover {
   flex-direction: column;
 }
 
+.infoInner__left div,
+.infoInner__right div {
+  height: calc(100% / 8)
+}
+
 .infoInner__left {
   border-right: 1px solid black;
 }
@@ -203,70 +115,16 @@ tbody tr:hover {
   border-left: 1px solid black;
 }
 
-.innerInner {
-  height: calc(100% / 8);
-  width: 100%;
-  font-family: 'Teko';
-  text-align: center;
-  font-size: 20px;
-  background-color: #ACCBE1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: underline;
-  color: rgb(77, 77, 77);
-}
-
-#innerInput {
-  background-color: unset;
-  display: flex;
-  justify-content: start;
-  margin: 0px 10px;
-  font-weight: 500;
-  text-decoration: unset;
-  color: black;
+.innerValue {
   font-size: 1.1vw;
-  overflow: scroll;
 }
 
-#back {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 100%;
-  position: absolute;
-  margin: 10px;
-}
-
-#back:hover {
-  cursor: pointer;
-  opacity: 0.7;
-}
 
 .recentlyViewed {
   border: 1px solid black;
-  height: 40px;
-  width: 25vw;
-  position: absolute;
   left: 3.75vw;
-  display: flex;
-  justify-items: center;
-  justify-content: center;
-  text-align: center;
-  flex-direction: column;
-  border-radius: 10px;
   background: rgba(0, 0, 0, 0.274);
-  font-family: 'Teko';
   font-size: 1.3vw;
-  top: 80px;
-}
-
-.recentlyViewed:hover {
-  cursor: pointer;
-  opacity: 0.7;
 }
 
 .css-177gid-MuiTableCell-root {
@@ -275,7 +133,7 @@ tbody tr:hover {
 
 #table {
   border-radius: 5px;
-  background-color: rgba(255, 255, 255, 0.646);
+  background: rgba(255, 255, 255, 0.646);
   border: 1px solid rgba(108, 108, 108, 0.1);
 }
 
@@ -313,11 +171,14 @@ thead th {
   #userHeader {
     margin: 5px;
   }
-  #two {
+  #nameLabel {
     margin-top: 5px;
   }
   .recentlyViewed {
     font-size: 1.5vw;
+  }
+  .innerValue {
+    font-size: 2.2vw;
   }
 }
 

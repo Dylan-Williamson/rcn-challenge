@@ -27,14 +27,14 @@ const ImageSection = () => {
   };
 
   return (
-    <div className="imageSection shadow-lg">
-      <ArrowCircleLeftIcon onClick={() => navigate(-1)} id="back" />
-      <h1 id="userHeader">USER PROFILE</h1>
-      <img className="avatar" src={user.picture.large} alt="avatar" />
-      <h1 id="two">
+    <div className="imageSection shadow-lg flex flex-col rounded-lg">
+      <ArrowCircleLeftIcon onClick={() => navigate(-1)} style={{width: '48px', height: '48px'}} className="rounded-full flex jusify-center items-center leading-none absolute m-2.5 hover:cursor-pointer hover:opacity-70" />
+      <h1 className="font-teko mt-5 underline text-center text-4xl text-black mb-5" id="userHeader">USER PROFILE</h1>
+      <img className="avatar h-72 w-72 rounded-full" src={user.picture.large} alt="avatar" />
+      <h1 className="font-teko mt-5 text-center text-2xl no-underline" id="nameLabel">
         {user.name.first} {user.name.last}
       </h1>
-      <h2>{calculateDaysUntilBirthday(user.dob.date)}</h2>
+      <h2 className="font-teko text-lg text-center mt-2">{calculateDaysUntilBirthday(user.dob.date)}</h2>
     </div>
   )
 }

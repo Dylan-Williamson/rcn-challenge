@@ -102,7 +102,7 @@ const DataTable = () => {
 
   return (
     <Box sx={{ width: '100%', maxWidth: '1600px', marginLeft: 'auto', marginRight: 'auto' }}>
-      <input className="h-8 outline-transparent w-1/3 max-w-xs rounded-md drop-shadow-lg fixed right-10 top-4 z-10 p-2 font-teko" type="text" placeholder="Search" onChange={handleSearch} value={search}/>
+      <input className="h-8 outline-transparent w-1/3 max-w-xs rounded-md drop-shadow-lg fixed right-10 top-4 z-20 p-2 font-teko" type="text" placeholder="Search" onChange={handleSearch} value={search}/>
       <Paper sx={{ width: '100%', mb: 2 }} id="table">
         <TableContainer>
           <Table

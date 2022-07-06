@@ -23,7 +23,7 @@ const UserProfile = () => {
     return <div className="profile">Loading...</div>;
   } else {
     return (
-      <div className="profile">
+      <div className="profile w-screen max-w-screen-2xl mx-auto flex">
         <ImageSection />
         <InfoSection />
       </div>

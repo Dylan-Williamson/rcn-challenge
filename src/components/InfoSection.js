@@ -15,88 +15,88 @@ const InfoSection = () => {
   };
 
   return (
-    <div className="infoSection">
-          <div className="infoSection__top shadow-lg">
-            <h1>CONTACT INFO</h1>
+    <div className="infoSection flex flex-col p-5 w-1/2">
+          <div className="infoSection__top shadow-lg w-full h-1/2 rounded-lg">
+            <h1 className="font-teko text-2xl text-center mt-2.5 text-black underline">CONTACT INFO</h1>
             <div className="infoInner">
               <div className="infoInner__left">
-                <div className="innerInner">STREET ADDRESS</div>
-                <div className="innerInner" id="innerInput">
+                <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">STREET ADDRESS</div>
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
                   {user.location.street.number} {user.location.street.name}
                 </div>
-                <div className="innerInner">CITY</div>
-                <div className="innerInner" id="innerInput">
+                <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">CITY</div>
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
                   {user.location.city}
                 </div>
-                <div className="innerInner">STATE</div>
-                <div className="innerInner" id="innerInput">
+                <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">STATE</div>
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
                   {user.location.state}
                 </div>
-                <div className="innerInner">COUNTRY</div>
-                <div className="innerInner" id="innerInput">
+                <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">COUNTRY</div>
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
                   {user.location.country}
                 </div>
               </div>
               <div className="infoInner__right">
-                <div className="innerInner">POSTAL CODE</div>
-                <div className="innerInner" id="innerInput">
+                <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">POSTAL CODE</div>
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
                   {user.location.postcode}
                 </div>
-                <div className="innerInner">EMAIL</div>
-                <div className="innerInner" id="innerInput">
+                <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">EMAIL</div>
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
                   {user.email}
                 </div>
-                <div className="innerInner">CELL PHONE</div>
-                <div className="innerInner" id="innerInput">
+                <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">CELL PHONE</div>
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
                   {convertToPhoneNumber(user.cell)}
                 </div>
-                <div className="innerInner">HOME PHONE</div>
-                <div className="innerInner" id="innerInput">
+                <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">HOME PHONE</div>
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
                   {convertToPhoneNumber(user.phone)}
                 </div>
               </div>
             </div>
           </div>
-          <div className="infoSection__bottom shadow-lg">
-            <h1>EMPLOYMENT INFO</h1>
+          <div className="infoSection__bottom shadow-lg w-full h-1/2 rounded-lg">
+            <h1 className="font-teko text-2xl text-center mt-2.5 text-black underline">EMPLOYMENT INFO</h1>
             <div className="infoInner">
               <div className="infoInner__left">
-                <div className="innerInner">JOB TITLE</div>
-                <div className="innerInner" id="innerInput">
+                <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">JOB TITLE</div>
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
                   SOFTWARE ENGINEER
                 </div>
-                <div className="innerInner">UUID</div>
-                <div className="innerInner" id="innerInput">
+                <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">UUID</div>
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
                   {user.login.uuid}
                 </div>
-                <div className="innerInner">USERNAME</div>
-                <div className="innerInner" id="innerInput">
+                <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">USERNAME</div>
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
                   {user.login.username}
                 </div>
-                <div className="innerInner">PASSWORD</div>
-                <div className="innerInner" id="innerInput">
+                <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">PASSWORD</div>
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
                   {user.login.password}
                 </div>
               </div>
               <div className="infoInner__right">
-                <div className="innerInner">DATE OF BIRTH</div>
-                <div className="innerInner" id="innerInput">
+                <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">DATE OF BIRTH</div>
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
                   {new Date(user.dob.date).toLocaleDateString("en-us", {
                     year: "numeric",
                     month: "long",
                     day: "numeric",
                   })}
                 </div>
-                <div className="innerInner">AGE</div>
-                <div className="innerInner" id="innerInput">
+                <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">AGE</div>
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
                   {user.dob.age} Years Old
                 </div>
-                <div className="innerInner">GENDER</div>
-                <div className="innerInner" id="innerInput">
+                <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">GENDER</div>
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
                   {user.gender.toUpperCase()}
                 </div>
-                <div className="innerInner">HIRE DATE</div>
-                <div className="innerInner" id="innerInput">
+                <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">HIRE DATE</div>
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
                   {new Date(user.registered.date).toLocaleDateString("en-us", {
                     year: "numeric",
                     month: "long",

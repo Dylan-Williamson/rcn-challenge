@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       colors: {
         primary: "#ff4800",
-        secondary: "#ff9100",
+        secondary: "#ACCBE1",
       },
       fontFamily: {
         'teko': ['Teko', 'sans-serif'],

@@ -4,7 +4,7 @@ import logo from '../assets/logo.png';
 
 const Nav = () => {
   return (
-    <nav className='w-screen fixed'>
+    <nav className='w-screen fixed flex flex-col self-center top-0 z-10'>
       <div className='flex gap-8 h-full px-10'>
         <div className='navItem flex items-center'>
           <NavLink className="hover:opacity-60" to="/" end>
