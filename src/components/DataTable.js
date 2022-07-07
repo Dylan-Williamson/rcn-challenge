@@ -98,7 +98,7 @@ const DataTable = () => {
     dispatch(setUsers(filterUsers(e.target.value)));
   }
   
-  const emptyRows = page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
+  const emptyRows = 0;
 
   return (
     <Box sx={{ width: '100%', maxWidth: '1600px', marginLeft: 'auto', marginRight: 'auto' }}>
