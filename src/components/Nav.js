@@ -12,7 +12,7 @@ const Nav = () => {
           </NavLink>
         </div>
         <div className='navItem flex items-center'>
-          <NavLink className="hover:opacity-60 font-teko text-lg" to="/dashboard" end>
+          <NavLink className="hover:opacity-60 font-teko text-md" to="/dashboard" end>
             DASHBOARD
           </NavLink>
         </div>
