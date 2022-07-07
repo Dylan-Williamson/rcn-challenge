@@ -103,7 +103,7 @@ const DataTable = () => {
   return (
     <Box sx={{ width: '100%', maxWidth: '1600px', marginLeft: 'auto', marginRight: 'auto' }}>
       <input className="h-8 outline-transparent w-1/3 max-w-xs rounded-md drop-shadow-lg fixed right-10 top-4 z-20 p-2 font-teko" type="text" placeholder="Search" onChange={handleSearch} value={search}/>
-      <Paper sx={{ width: '100%', mb: 2 }} id="table">
+      <Paper sx={{ width: '100%', mb: 2, pl: 2 }} id="table">
         <TableContainer>
           <Table
             sx={{ minWidth: 750 }}
@@ -125,18 +125,9 @@ const DataTable = () => {
                     <TableRow
                       hover
                       onClick={(event) => handleClick(event, row.name)}
-                      role="checkbox"
                       tabIndex={-1}
                       key={row.name}
                     >
-                      <TableCell padding="checkbox">
-                        <Checkbox
-                          color="primary"
-                          inputProps={{
-                            'aria-labelledby': labelId,
-                          }}
-                        />
-                      </TableCell>
                       <TableCell
                         component="th"
                         id={labelId}

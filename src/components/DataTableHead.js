@@ -9,7 +9,7 @@ import Checkbox from '@mui/material/Checkbox';
 import { visuallyHidden } from '@mui/utils';
 
 const DataTableHead = (props) => {
-  const { onSelectAllClick, order, orderBy, numSelected, rowCount, onRequestSort } =
+  const { order, orderBy, onRequestSort } =
   props;
   const createSortHandler = (property) => (event) => {
     onRequestSort(event, property);
@@ -45,17 +45,6 @@ const DataTableHead = (props) => {
   return (
     <TableHead>
       <TableRow>
-        <TableCell padding="checkbox">
-          <Checkbox
-            color="primary"
-            indeterminate={numSelected > 0 && numSelected < rowCount}
-            checked={rowCount > 0 && numSelected === rowCount}
-            onChange={onSelectAllClick}
-            inputProps={{
-              'aria-label': 'Select All Users',
-            }}
-            />
-        </TableCell>
         {headCells.map((headCell) => (
           <TableCell
           key={headCell.id}

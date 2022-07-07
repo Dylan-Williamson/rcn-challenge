@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 const InfoSection = () => {
 
-  const user = useSelector((state) => state.users.user);
+  const user = useSelector(state => state.users.user);
 
   const convertToPhoneNumber = (phoneNumberString) => {
     const cleaned = ("" + phoneNumberString).replace(/\D/g, "");
