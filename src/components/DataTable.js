@@ -96,6 +96,7 @@ const DataTable = () => {
   const handleSearch = (e) => {
     setSearch(e.target.value);
     dispatch(setUsers(filterUsers(e.target.value)));
+    setPage(0)
   }
   
   const emptyRows = 0;
@@ -158,7 +159,7 @@ const DataTable = () => {
         <TablePagination
           rowsPerPageOptions={[10, 25, 50, { label: 'All', value: -1 }]}
           component="div"
-          count={rows().length}
+          count={filteredUsers.length}
           rowsPerPage={rowsPerPage}
           page={page}
           onPageChange={handleChangePage}
