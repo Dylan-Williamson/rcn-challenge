@@ -21,37 +21,37 @@ const InfoSection = () => {
             <div className="infoInner">
               <div className="infoInner__left">
                 <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">STREET ADDRESS</div>
-                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-auto no-underline ">
                   {user.location.street.number} {user.location.street.name}
                 </div>
                 <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">CITY</div>
-                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-auto no-underline ">
                   {user.location.city}
                 </div>
                 <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">STATE</div>
-                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-auto no-underline ">
                   {user.location.state}
                 </div>
                 <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">COUNTRY</div>
-                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-auto no-underline ">
                   {user.location.country}
                 </div>
               </div>
               <div className="infoInner__right">
                 <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">POSTAL CODE</div>
-                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-auto no-underline ">
                   {user.location.postcode}
                 </div>
                 <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">EMAIL</div>
-                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-auto no-underline ">
                   {user.email}
                 </div>
                 <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">CELL PHONE</div>
-                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-auto no-underline ">
                   {convertToPhoneNumber(user.cell)}
                 </div>
                 <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">HOME PHONE</div>
-                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-auto no-underline ">
                   {convertToPhoneNumber(user.phone)}
                 </div>
               </div>
@@ -62,25 +62,25 @@ const InfoSection = () => {
             <div className="infoInner">
               <div className="infoInner__left">
                 <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">JOB TITLE</div>
-                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-auto no-underline ">
                   SOFTWARE ENGINEER
                 </div>
                 <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">UUID</div>
-                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-auto no-underline ">
                   {user.login.uuid}
                 </div>
                 <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">USERNAME</div>
-                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-auto no-underline ">
                   {user.login.username}
                 </div>
                 <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">PASSWORD</div>
-                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-auto no-underline ">
                   {user.login.password}
                 </div>
               </div>
               <div className="infoInner__right">
                 <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">DATE OF BIRTH</div>
-                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-auto no-underline ">
                   {new Date(user.dob.date).toLocaleDateString("en-us", {
                     year: "numeric",
                     month: "long",
@@ -88,15 +88,15 @@ const InfoSection = () => {
                   })}
                 </div>
                 <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">AGE</div>
-                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-auto no-underline ">
                   {user.dob.age} Years Old
                 </div>
                 <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">GENDER</div>
-                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-auto no-underline ">
                   {user.gender.toUpperCase()}
                 </div>
                 <div className="w-full font-teko text-center text-lg bg-secondary flex justify-center items-center underline">HIRE DATE</div>
-                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-scroll no-underline ">
+                <div className="innerValue w-full font-teko text-center flex justify-start mx-2 items-center overflow-auto no-underline ">
                   {new Date(user.registered.date).toLocaleDateString("en-us", {
                     year: "numeric",
                     month: "long",
